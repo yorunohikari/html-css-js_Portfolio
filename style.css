@@ -163,7 +163,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 80vh;
+  height: 100vh;
 }
 
 .section__pic-container {
@@ -259,6 +259,7 @@ section {
 
 #about {
   position: relative;
+  height: 100vh;
 }
 
 .about-containers {
@@ -311,6 +312,7 @@ section {
 
 #experience {
   position: relative;
+  height: 100vh;
 }
 
 .experience-sub-title {
@@ -343,4 +345,32 @@ article {
 
 article .icon {
   cursor: default;
+}
+
+/* Project Section */
+
+#project {
+  position: relative;
+  height: 100vh;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
 }
