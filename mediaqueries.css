@@ -21,6 +21,10 @@
 
     } 
 
+    #about {
+        height: auto;
+    }
+
     #experience {
         height: auto;
     }
@@ -40,14 +44,17 @@
         margin: 0 5%;
     }
 
-    section__pic-container {
+    .section__pic-container {
+        display: flex;
         width: 275px;
         height: 275px;
         margin: 0 auto 2rem;
+        justify-content: center;
     }
     .about-containers {
         margin-top: 0;
     }
+
 }
 
 @media screen and (max-width: 600px)  {
