@@ -163,7 +163,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 100vh;
+  height: 86vh;
 }
 
 .section__pic-container {
@@ -287,6 +287,7 @@ section {
   bottom: 2.5rem;
 }
 
+
 .details-container {
   padding: 1.5rem;
   flex: 1;
@@ -382,6 +383,7 @@ article .icon {
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  position: relative;
 }
 
 .contact-info-upper-container {
@@ -409,4 +411,27 @@ article .icon {
 
 .contact-icon {
   cursor: default;
+}
+
+/*footer section */
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* floating arrow*/
+#scrollToTopArrow {
+  position: fixed;
+  top: 50%; /* Position it vertically in the middle */
+  left: 5rem; /* Adjust the value to control the horizontal position */
+  transform: translateY(-50%);  cursor: pointer;
+  display: none; /* Initially hide the arrow */
+}
+
+#scrollToTopArrow.show {
+  display: block; /* Show the arrow when it should be visible */
 }
