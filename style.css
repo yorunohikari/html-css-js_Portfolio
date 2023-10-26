@@ -259,7 +259,6 @@ section {
 
 #about {
   position: relative;
-  height: 100vh;
 }
 
 .about-containers {
@@ -313,7 +312,6 @@ section {
 
 #experience {
   position: relative;
-  height: 100vh;
 }
 
 .experience-sub-title {
@@ -352,7 +350,6 @@ article .icon {
 
 #project {
   position: relative;
-  height: 100vh;
 }
 
 .color-container {
