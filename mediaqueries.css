@@ -51,10 +51,12 @@
     #contact, footer {
         height: 48vh;
     }
+
     #profile {
         height: 83vh;
         margin-bottom: 0;
     }
+
     article {
         font-size: 1rem;
     }
@@ -96,19 +98,22 @@
         height: 46vw;
         justify-content: center;
     }
+
     .section__text_p2 {
         font-size: 1.2rem;
     }
+
     .title {
         font-size: 2rem;
     }
+
     .text-container {
         text-align: justify;
     }
+
     #scrollToTopArrow.show {
         display: none; /* Show the arrow when it should be visible */
       }
-    }
 
     .about-pic {
         padding: 1vh;
