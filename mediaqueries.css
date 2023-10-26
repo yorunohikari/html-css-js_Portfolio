@@ -21,6 +21,9 @@
 
     } 
 
+    #experience {
+        height: auto;
+    }
     #profile, .section-container {
         display: block;
     }
