@@ -1,0 +1,17 @@
+@media screen and (max-width: 900px) {
+    #dekstop-nav {
+        display: none;
+        section
+    }
+    #blog-container {
+        margin: auto;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .letter {
+        padding: 10px;
+    }
+}
