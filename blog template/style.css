@@ -1,5 +1,4 @@
-/* General */
-
+/* General Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
@@ -8,240 +7,224 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
-
 
 .logo {
     font-size: 2rem;
 }
 
 .logo:hover {
-  cursor: default;
+    cursor: default;
 }
 
 a:visited {
-  color: black;
+    color: black;
 }
 
 a {
-  color: black;
-  text-decoration: none;
-  text-decoration-color: white;
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
 }
 
 a:hover {
-  color: rgb(77, 76, 76);
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+    color: rgb(77, 76, 76);
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
 }
 
-/*nav*/
-
+/* Navigation Styles */
 nav, .nav-links {
     display: flex;
-  }
-  
+}
+
 nav {
     justify-content: space-around;
     align-items: center;
     height: 8vh;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
 }
-  
+
 .nav-links {
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
-
 }
 
-.scroll-down {
-	header {
-		transform: translate3d(0, -100%, 0);
-	}
+.scroll-down header {
+    transform: translate3d(0, -100%, 0);
 }
 
-.scroll-up {
-	header {
-		filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
-	}
+.scroll-up header {
+    filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
 }
 
 .menu-is-open {
-	overflow: hidden;
-
-	header {
-		filter: none;
-	}
+    overflow: hidden;
 }
 
+/* Section Styles */
 section {
-  padding: 4vh;
-  height: 96hv;
-  margin: 0 10rem;
-  box-sizing: border-box;
-  min-height: fit-content;
-  text-align: justify;
+    padding: 4vh;
+    height: 96hv;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+    text-align: justify;
 }
 
-/* search things */
+/* Search Container Styles */
 .search-container {
-  display: flex;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 5px;
+    display: flex;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
 }
 
-/* Style the input field */
+/* Search Input Styles */
 .search-input {
-  border: none;
-  width: 80%;
-  padding: 5px;
+    border: none;
+    width: 80%;
+    padding: 5px;
 }
 
-/* Style the search button */
+/* Search Button Styles */
 .search-button {
-  background-color: #ffffff; /* Dark gray color for the button */
-  color: rgb(0, 0, 0);
-  border: 5px;
-  border-radius: 6px;
-  padding: 5px;
-  cursor: pointer;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 5px;
+    border-radius: 6px;
+    padding: 5px;
+    cursor: pointer;
 }
 
-
-
-/* custom */
-
-
+/* Custom Styles */
 .book-container {
-  background-color: #fff;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 .book-page {
-  page-break-before: always;
-  page-break-inside: avoid;
+    page-break-before: always;
+    page-break-inside: avoid;
 }
 
 .book-header {
-  color: black;
-  text-align: center;
-  padding: 20px 0;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
 }
 
 .book-title {
-  color: black;
-  font-size: 24px;
-  font-weight: bold;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .book-author {
-  color: black;
-  font-style: italic;
+    color: black;
+    font-style: italic;
 }
 
 .book-content {
-  color: black;
-  line-height: 1.6;
-  text-align: justify;
-  margin: 20px 0;
+    color: black;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 20px 0;
 }
 
 .book-cover {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
 }
 
 .book-content blockquote {
-  color: black; /* Set font color to black for blockquotes */
-  text-align: left; /* Align the text to the left */
-  padding: 20px;
-  font-weight: 600;
+    color: black;
+    text-align: left;
+    padding: 20px;
+    font-weight: 600;
 }
 
 .book-footer {
-  color: black;
-  text-align: right;
-  margin-top: 20px;
+    color: black;
+    text-align: right;
+    margin-top: 20px;
 }
 
 .letter {
-  color: black;
-  font-weight: bold;
-  font-style: italic;
-  font-size: 14px; /* Adjust the font size as desired */
-  margin-top: 20px; /* Add some space between the letter and the book content */
-  padding: 100px;
-  border: 1px solid #ccc; /* Add a border for visual separation */
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 100px;
+    border: 1px solid #ccc;
 }
+
 .newspaper-container {
-  max-width: 500px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border: 2px solid #333;
-  border-radius: 5px;
-  padding: 20px;
-  text-align: center;
-  margin: 0 auto; /* Center horizontally */
+    max-width: 500px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .custom-publisher {
-  font-size: 18px;
-  font-weight: bold;
-  font-family: "Noticia Text", serif; /* Use Noticia Text font */
-  margin-bottom: 20px;
-  color: #000000; /* Custom color */
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Noticia Text", serif;
+    margin-bottom: 20px;
+    color: #000000;
 }
 
 .custom-headline-1 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 10px; /* Smaller margin */
-  color: #000000; /* Custom color */
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000;
 }
 
 .custom-headline-2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px; /* Smaller margin */
-  color: #000000; /* Custom color */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000;
 }
 
 .custom-headline-3 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #000000; /* Custom color */
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
 }
 
 p {
-    margin-bottom: 15px; /* You can adjust the value to control the spacing */
+    margin-bottom: 15px;
 }
 
-/* footer */
-/* Target the <nav> element inside the <footer> element */
+/* Footer Styles */
 footer nav {
-  /* Your CSS styles for the navigation menu go here */
-  background-color: #ffffff; /* Example background color */
-  color: rgb(0, 0, 0); /* Example text color */
-  padding: 10px; /* Example padding */
-  /* Add more styles as needed */
-  box-shadow: none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    box-shadow: none;
 }
 
 footer p {
-  text-align: center;
+    text-align: center;
 }
