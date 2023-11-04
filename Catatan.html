@@ -14,7 +14,8 @@
         align-items: center; /* Center vertically */
         min-height: 100vh; /* Ensure full viewport height */
         cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🏃‍♂️</text></svg>")
-      16 0, auto;
+            16 0,
+          auto;
       }
 
       .book-container {
@@ -64,7 +65,7 @@
 
       .book-footer {
         color: black;
-        text-align: right;
+        text-align: center;
         margin-top: 20px;
       }
 
@@ -127,6 +128,37 @@
       .tooltip:hover .tooltiptext {
         visibility: visible;
       }
+
+      /* note */
+      .notes-container {
+        max-width: 300px; /* Adjust the maximum width as needed */
+        margin: 0 auto; /* Center the container horizontally */
+        border: 1px solid #ccc; /* Light gray border */
+        background-color: #f7f7f7; /* Light gray background color */
+        padding: 10px;
+        text-align: left; /* Adjust text alignment as needed */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+      }
+
+      .notes-header {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .notes-image {
+        max-width: 250px; /* Make the image responsive within the container */
+        display: block; /* Remove any extra spacing around the image */
+        margin: 0 auto; /* Center the image horizontally */
+      }
+
+      /* Additional styling for links or other elements within the notes */
+      .notes-container a {
+        color: #0645ad; /* Wikipedia blue color */
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
@@ -138,6 +170,13 @@
           <p class="book-author">205110200111021</p>
         </div>
         <div class="book-content">
+            <div class="figure-container">
+                <img
+                  src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/teman-teman-1.JPG?raw=true"
+                  alt="Memandangi malang"
+                />
+                <p class="figure-caption">Saat di Jalan Ijen</p>
+              </div>
           <p>
             Sinar Mentari pagi yang tak diundang membangunkanku dari tidurku.
             Terbangun tanpa alarm, oh nikmatnya hidupku. Playlist lagu Jepang
@@ -166,6 +205,13 @@
             mahasiswa-mahasiswa jompo seperti kami. Akhirnya kami memutuskan
             untuk pergi ke Hutan Kota Malabar, kira-kira 3 kilometer dari UB.
           </p>
+          <div class="figure-container">
+            <img
+              src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/ub.JPG?raw=true"
+              alt="UB di pagi hari"
+            />
+            <p class="figure-caption">UB di pagi hari</p>
+          </div>
           <p>
             Kami berangkat pukul setengah sembilan melalui Gerbang Veteran. Saat
             itu masih cerah tanpa ada awan mendung di langit. Jalan raya pun
@@ -175,10 +221,6 @@
             terlalu cerah. Lalu-lalang kendaraan entah ke mana tujuan mereka di
             Sabtu pagi ini.
           </p>
-          <div class="figure-container">
-            <img src="/assets/ub.JPG" alt="Your Image Description" />
-            <p class="figure-caption">Your Figure Caption</p>
-          </div>
         </div>
       </div>
       <div class="book-page">
@@ -204,13 +246,14 @@
             <iframe
               width="100%"
               height="225"
-              src="/assets/jungkat.webm"
+              src="https://www.youtube.com/embed/qlXLvVcxU-o?si=CSdfRzFGSvFJo1MM"
+              title="YouTube video player"
               frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
             ></iframe>
             <p class="figure-caption">Bermain jungkat-jungkit</p>
           </div>
-
           <p>
             Pada pukul sepuluh, kami memutuskan untuk beranjak dari
             peristirahatan kami dan melanjutkan perjalanan kembali ke UB. Tidak
@@ -222,7 +265,10 @@
             muncul di pertengahan perang dunia satu dan perang dunia dua.
           </p>
           <div class="figure-container">
-            <img src="/assets/Katedral.JPG" alt="Your Image Description" />
+            <img
+              src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/Katedral.JPG?raw=true"
+              alt="Gereja Katedral Paroki Santa Perawan Maria dari Gunung Karmel"
+            />
             <p class="figure-caption">
               Gereja Katedral Paroki Santa Perawan Maria dari Gunung Karmel
             </p>
@@ -262,7 +308,10 @@
           </p>
 
           <div class="figure-container">
-            <img src="/assets/mie-ayam.JPG" alt="Your Image Description" />
+            <img
+              src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/mie-ayam.JPG?raw=true"
+              alt="Your Image Description"
+            />
             <p class="figure-caption">Sarapan</p>
           </div>
           <p>
@@ -286,6 +335,18 @@
             kurang sedikit manis tapi cukup untuk melepas dahagaku setelah
             berjalan cukup jauh.
           </p>
+          <div class="figure-container">
+            <iframe
+              width="100%"
+              height="225"
+              src="https://www.youtube.com/embed/ocsoYZRmXNM?si=QdFQkyX_G4nQWuT0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <p class="figure-caption">Bazaar</p>
+          </div>
           <p>
             Kami pun sampai dan berkumpul kembali di Teras Budaya, sesuai dengan
             instruksi yang diberikan oleh dosenku. Tepat saat kami sampai di
@@ -297,15 +358,29 @@
           </p>
           <p>
             Quest pun selesai dan semuanya kembali melakukan kegiatannya
-            masing-masing. Bagiku perjalanan ini mengesankan(meskipun agak
-            capek). Kami tidak hanya menjelajahi kota dan mencatat pengalaman
+            masing-masing. Bagiku perjalanan ini <span class="tooltip"
+            >mengesankan<span class="tooltiptext">meskipun agak capek</span></span>. Kami tidak hanya menjelajahi kota dan mencatat pengalaman
             kami, tetapi juga memperkuat ikatan di antara kami. Momen di Taman
             Keluarga Merbabu dan saat menikmati mie ayam bersama telah
             menciptakan kenangan yang penuh tawa dan hangat. Itu adalah
             pengalaman yang membuktikan bahwa kadang-kadang, tugas yang tak
             terduga bisa menjadi petualangan yang cukup seru dalam hidup.
           </p>
+          <p>
+            Terima kasih telah membaca catatan perjalanan singkat ini. Semoga kalian juga bisa menikmati perjalanan seperti yang telah kami lakukan. Salam sejahtera, salam bahagia.
+          </p>
           <p class="book-footer">Malang, 11 November 2023</p>
+          <div class="notes-container">
+            <p class="notes-header">Notes:</p>
+            <img
+              src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/jalan-jelek.JPG?raw=true"
+              alt="Jalan Jelek banget gilaa"
+              class="notes-image"
+            />
+            <p>
+                Sedikit catatan untuk Pemerintah Kota Malang, ini jalanan kek mana ini? Trotoar kok pecah pecah gini? Kek manaaa ini?? Sangat tidak ramah pejalan kaki. Bintang 1 untuk dishub malang.
+            </p>
+          </div>
         </div>
       </div>
     </div>
