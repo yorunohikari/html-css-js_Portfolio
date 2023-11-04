@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    /* Add the existing CSS for the tooltip here */
+    .book-tol {
+      text-align: center;
+      position: relative; /* Add relative positioning to the book-footer */
+      display: inline-block; /* Ensure it respects the width of the content */
+    }
+
+    /* Additional CSS for the tooltip within the book-footer */
+    .book-tol .tooltip {
+      cursor: help;
+      text-decoration: underline;
+      color: #0645ad;
+    }
+
+    .book-tol .tooltiptext {
+      visibility: hidden;
+      width: 200px; /* Adjust the width as needed */
+      background-color: #f7f7f7; /* Light gray background color */
+      color: #000;
+      text-align: left;
+      border: 1px solid #ccc; /* Light gray border */
+      border-radius: 5px;
+      padding: 10px;
+      position: absolute;
+      z-index: 1;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      font-size: 14px;
+    }
+
+    /* Adjust the positioning of the tooltip within book-footer */
+    .book-tol .tooltip:hover .tooltiptext {
+      visibility: visible;
+      top: -160%; /* Adjust the top position to position the tooltip */
+    }
+  </style>
+  <body style="text-align: center">
+    <p>ashgdfhgsfjhgasjkhdgfjkasghdfkjahgsdjkfhgaksjhdfgajkshdgfjk</p>
+    <p class="book-tol">
+      Malang<span class="tooltip">
+        (?)
+        <span class="tooltiptext">Tooltip text for Malang</span> </span
+      >, 11 November 2023
+    </p>
+  </body>
+</html>
