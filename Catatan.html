@@ -160,10 +160,32 @@
         text-decoration: underline;
       }
 
+      #toggle-button {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%); /* Vertically center the button */
+        left: 5rem;
+        padding: 0.5rem 1rem; /* Adjust padding for better visibility */
+        font-size: 20px; /* Increase font size for flag emojis */
+        background-color: #fff; /* Add a background color for contrast */
+        border: 1px solid #ccc; /* Add a border for clarity */
+        border-radius: 4px; /* Add rounded corners */
+        cursor: pointer; /* Change cursor to pointer on hover */
+      }
+
+      .language-toggle[data-lang="bahasaindonesia"] {
+        display: block; /* Show the default language */
+      }
+
       @media screen and (max-width: 900px) {
         .tooltip .tooltiptext {
-        width: 100px;
-      }
+          width: 100px;
+        }
+        #toggle-button {
+          position: fixed;
+          top: 90%;
+          left: 70%;
+        }
       }
     </style>
   </head>
@@ -171,7 +193,16 @@
     <div class="book-container">
       <div class="book-page">
         <div class="book-header">
-          <p class="book-title">Jalan Jalan Malang</p>
+          <p class="book-title language-toggle" data-lang="bahasaindonesia">
+            Jalan Jalan Malang
+          </p>
+          <p
+            class="book-title language-toggle"
+            data-lang="nihongo"
+            style="display: none"
+          >
+            マランでの散策
+          </p>
           <p class="book-author">Osha Fannya Permadi</p>
           <p class="book-author">205110200111021</p>
         </div>
@@ -181,27 +212,53 @@
               src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/teman-teman-1.JPG?raw=true"
               alt="Memandangi malang"
             />
-            <p class="figure-caption">Saat di Jalan Ijen</p>
+            <p
+              class="figure-caption language-toggle"
+              data-lang="bahasaindonesia"
+            >
+              Saat di Jalan Ijen
+            </p>
+            <p
+              class="figure-caption language-toggle"
+              data-lang="nihongo"
+              style="display: none"
+            >
+              Ijenの道に
+            </p>
           </div>
-          <p>
+          <p class="language-toggle" data-lang="bahasaindonesia">
             Sinar Mentari pagi yang tak diundang memasuki kamar dan
             membangunkanku dari tidurku. Terbangun tanpa alarm, oh nikmatnya
-            hidupku. <i>Playlist</i> lagu Jepang dari semalam masih berputar
-            saat aku meraih ponselku. Terlihat notifikasi telegram dari grup
-            chat kelas, dosenku memberitahukan bahwa kelas hari ini akan berbeda
-            dari kelas biasanya. Kami diberi <i>Quest</i>, yaitu jalan-jalan
-            keliling kota dan menulis pengalaman perjalanan itu di catatan
-            perjalanan. Setelah melihat notifikasi itu aku bergegas mandi dan
-            menyiapkan barang-barang yang perlu kubawa untuk perjalanan nanti.
+            hidupku.
+            <i
+              ><a
+                href="https://open.spotify.com/playlist/18sDf2QkpdwcFpdIm3ETUW"
+                target="_blank"
+                >Playlist</a
+              ></i
+            >
+            lagu Jepang dari semalam masih berputar saat aku meraih ponselku.
+            Terlihat notifikasi telegram dari grup chat kelas, dosenku
+            memberitahukan bahwa kelas hari ini akan berbeda dari kelas
+            biasanya. Kami diberi <i>Quest</i>, yaitu jalan-jalan keliling kota
+            dan menulis pengalaman perjalanan itu di catatan perjalanan. Setelah
+            melihat notifikasi itu aku bergegas mandi dan menyiapkan
+            barang-barang yang perlu kubawa untuk perjalanan nanti.
           </p>
-          <p>
+          <p class="language-toggle" data-lang="nihongo" style="display: none">
+            突然の朝日が俺の部屋に入ってきて、俺をベッドから引っ張り起こすんだ。アラームなしで目が覚める、最高の感じだぜ。昨日の夜に聴いた日本の曲のプレイリストがまだ再生中で、スマホを手に取るよ。大学のクラスのチャットグループからお知らせが来て、先生が今日の授業が普段とは違うって教えてくれる。今日はクエストがあって、街中を歩き回って旅行の体験をノートに書かないといけないんだ。それを見て俺は急いでシャワーを浴びて、旅行に持って行く物を用意するんだ。
+          </p>
+          <p class="language-toggle" data-lang="bahasaindonesia">
             Setelah semua siap, aku pergi menuju UB menaiki motor yang kuberi
             nama Iris. Dewi dari mitologi Yunani yang merupakan personifikasi
-            dari pelangi. Pengirim pesan para dewa, pembawa air untuk para dewa,
-            Iris mengantarku ke tujuan.
+            dari pelangi. Pengirim pesan dan pembawa air untuk para dewa, Iris
+            mengantarku ke tujuan.
           </p>
-          <p>
-            Aku sampai di UB tepat jam delapan lebih satu menit. Teman-teman
+          <p class="language-toggle" data-lang="nihongo" style="display: none">
+            準備ができたら、UBに行くね。バイクで、それが『アイリス』って名前の。ギリシャ神話のキャラで、虹の化身なんだよ。神様たちへの伝令と水を運ぶ存在で、アイリスが目的地まで案内してくれるんだ。
+          </p>
+          <p class="language-toggle" data-lang="bahasaindonesia">
+            Aku sampai di UB tepat pukul delapan lebih satu menit. Teman-teman
             kelasku sudah ramai dan berkumpul di Teras Budaya. Di kelas itu kami
             dibagi menjadi beberapa kelompok. Namun, teman satu kelompokku ada
             yang tidak bisa hadir karena beberapa perihal. Kami memikirkan ke
@@ -210,6 +267,12 @@
             Namun, sepertinya destinasi tersebut terlalu jauh untuk
             mahasiswa-mahasiswa jompo seperti kami. Akhirnya kami memutuskan
             untuk pergi ke Hutan Kota Malabar, kira-kira 4 kilometer dari UB.
+          </p>
+          <p class="language-toggle" data-lang="nihongo" style="display: none">
+            UBに着いたのは、ちょうど8時を過ぎた1分ほど後だった。クラスメートたちはもうTeras
+            Budayaで集まって、ワイワイやってたよ。クラスでは、みんなでグループ分けされてたんだ。でも、ちょっと用事があって、俺たちのグループの誰かが来られなかったんだ。で、どこに行くかって悩んでたんだ。先生がメッセージでアドバイスしてくれて、Alun-Alun
+            Tugu、Alun Alun
+            Kota、市場みたいな場所を勧めてたんだ。でも、そんな遠くに行くのは、俺たちみたいな貧乏大学生にはキツすぎたな。最終的にはUBから4キロぐらい離れたマラバール・シティフォレストに行くことにしたんだ。
           </p>
           <div class="figure-container">
             <img
@@ -338,7 +401,7 @@
             belok menuju bundaran. Di situ kami menjumpai stan makanan yang
             cukup banyak jumlahnya. Ada penjual takoyaki, nasi goreng, soto,
             pempek, dan lain-lain. Aku pun membeli teh poci. Yah, meskipun
-            kurang sedikit manis tapi cukup untuk melepas dahagaku setelah
+            sedikit kurang manis tapi cukup untuk melepas dahagaku setelah
             berjalan cukup jauh.
           </p>
           <div class="figure-container">
@@ -381,7 +444,7 @@
             kalian juga bisa menikmati perjalanan seperti yang telah kami
             lakukan. Salam sejahtera, salam bahagia.
           </p>
-          <p class="book-footer">Malang, 11 November 2023</p>
+          <p class="book-footer">Malang, 4 November 2023</p>
           <div class="notes-container">
             <p class="notes-header">Notes:</p>
             <img
@@ -398,5 +461,23 @@
         </div>
       </div>
     </div>
+    <button id="toggle-button">🇯🇵</button>
+    <script>
+      // Function to toggle the language
+      document
+        .getElementById("toggle-button")
+        .addEventListener("click", function () {
+          var paragraphs = document.querySelectorAll(".language-toggle");
+          var currentLang =
+            paragraphs[0].style.display === "block"
+              ? "nihongo"
+              : "bahasaindonesia";
+
+          paragraphs.forEach(function (paragraph) {
+            var lang = paragraph.getAttribute("data-lang");
+            paragraph.style.display = lang === currentLang ? "block" : "none";
+          });
+        });
+    </script>
   </body>
 </html>
