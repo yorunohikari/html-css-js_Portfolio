@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jalan Jalan Malang</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        min-height: 100vh; /* Ensure full viewport height */
+        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🏃‍♂️</text></svg>")
+            16 0,
+          auto;
+      }
+
+      .book-container {
+        background-color: #fff;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      .book-page {
+        page-break-before: always;
+        page-break-inside: avoid;
+      }
+
+      .book-header {
+        color: black;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      .book-title {
+        color: black;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .book-author {
+        color: black;
+        font-style: italic;
+      }
+
+      .book-content {
+        color: black;
+        line-height: 1.6;
+        text-align: justify;
+        margin: 20px 0;
+      }
+
+      .book-cover {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+      }
+
+      .book-footer {
+        color: black;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .letter {
+        color: black;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 14px; /* Adjust the font size as desired */
+        margin-top: 20px; /* Add some space between the letter and the book content */
+        padding: 10px;
+        border: 1px solid #ccc; /* Add a border for visual separation */
+      }
+      /* figure container and caption */
+      .figure-container {
+        max-width: 400px; /* Adjust the maximum width as needed */
+        margin: 20px auto;
+        border: 1px solid #ddd; /* Light gray border */
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .figure-container img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .figure-caption {
+        font-size: 14px;
+        margin: 10px 0;
+        color: #555; /* Text color for the caption */
+      }
+
+      /* tooltip*/
+      /* Tooltip Styles */
+      .tooltip {
+        position: relative;
+        color: #0645ad; /* Wikipedia blue color */
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: #ffffff;
+        color: #000;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        font-size: 14px;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+
+      /* note */
+      .notes-container {
+        max-width: 300px; /* Adjust the maximum width as needed */
+        margin: 0 auto; /* Center the container horizontally */
+        border: 1px solid #ccc; /* Light gray border */
+        background-color: #f7f7f7; /* Light gray background color */
+        padding: 10px;
+        text-align: left; /* Adjust text alignment as needed */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+      }
+
+      .notes-header {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .notes-image {
+        max-width: 250px; /* Make the image responsive within the container */
+        display: block; /* Remove any extra spacing around the image */
+        margin: 0 auto; /* Center the image horizontally */
+      }
+
+      /* Additional styling for links or other elements within the notes */
+      .notes-container a {
+        color: #0645ad; /* Wikipedia blue color */
+        text-decoration: underline;
+      }
+
+      @media screen and (max-width: 900px) {
+        .tooltip .tooltiptext {
+        width: 100px;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="book-container">
+      <div class="book-page">
+        <div class="book-header">
+          <p class="book-title">Jalan Jalan Malang</p>
+          <p class="book-author">Osha Fannya Permadi</p>
+          <p class="book-author">205110200111021</p>
+        </div>
+        <div class="book-content">
+          <div class="figure-container">
+            <img
+              src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/teman-teman-1.JPG?raw=true"
+              alt="Memandangi malang"
+            />
+            <p class="figure-caption">Saat di Jalan Ijen</p>
+          </div>
+          <p>
+            Sinar Mentari pagi yang tak diundang memasuki kamar dan
+            membangunkanku dari tidurku. Terbangun tanpa alarm, oh nikmatnya
+            hidupku. <i><a href="https://open.spotify.com/playlist/18sDf2QkpdwcFpdIm3ETUW" target="_blank">Playlist</a></i> lagu Jepang dari semalam masih berputar
+            saat aku meraih ponselku. Terlihat notifikasi telegram dari grup
+            chat kelas, dosenku memberitahukan bahwa kelas hari ini akan berbeda
+            dari kelas biasanya. Kami diberi <i>Quest</i>, yaitu jalan-jalan
+            keliling kota dan menulis pengalaman perjalanan itu di catatan
+            perjalanan. Setelah melihat notifikasi itu aku bergegas mandi dan
+            menyiapkan barang-barang yang perlu kubawa untuk perjalanan nanti.
+          </p>
+          <p>
+            Setelah semua siap, aku pergi menuju UB menaiki motor yang kuberi
+            nama Iris. Dewi dari mitologi Yunani yang merupakan personifikasi
+            dari pelangi. Pengirim pesan dan pembawa air untuk para dewa,
+            Iris mengantarku ke tujuan.
+          </p>
+          <p>
+            Aku sampai di UB tepat pukul delapan lebih satu menit. Teman-teman
+            kelasku sudah ramai dan berkumpul di Teras Budaya. Di kelas itu kami
+            dibagi menjadi beberapa kelompok. Namun, teman satu kelompokku ada
+            yang tidak bisa hadir karena beberapa perihal. Kami memikirkan ke
+            mana kami akan pergi. Dalam pesannya Dosenku menyarankan ke
+            pusat-pusat kota seperti, Alun-Alun Tugu, Alun-Alun Kota, Pasar.
+            Namun, sepertinya destinasi tersebut terlalu jauh untuk
+            mahasiswa-mahasiswa jompo seperti kami. Akhirnya kami memutuskan
+            untuk pergi ke Hutan Kota Malabar, kira-kira 4 kilometer dari UB.
+          </p>
+          <div class="figure-container">
+            <img
+              src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/ub.JPG?raw=true"
+              alt="UB di pagi hari"
+            />
+            <p class="figure-caption">UB di pagi hari</p>
+          </div>
+          <p>
+            Kami berangkat pukul setengah sembilan melalui Gerbang Veteran. Saat
+            itu masih cerah tanpa ada awan mendung di langit. Jalan raya pun
+            tidak terlalu ramai meskipun hari ini adalah hari Sabtu. Hanya
+            lalu-lalang biasa kendaraan entah ke mana tujuan mereka di Sabtu
+            pagi ini. Kami menyusuri Jalan Veteran sembari bercakap-cakap
+            ringan. Aku menyesali keputusanku untuk memakai kaos hitam karena
+            pagi itu cuacanya terlalu cerah.
+          </p>
+        </div>
+      </div>
+      <div class="book-page">
+        <div class="book-content">
+          <p>
+            Setelah berjalan kurang lebih empat puluh menit, kami sampai di
+            Taman Keluarga Merbabu. Sebenarnya Hutan Kota sudah di depan mata,
+            tapi kami memutuskan untuk berhenti di sini saja. Taman ini taman
+            kecil, dengan sedikit wahana untuk bermain dan berolahraga untuk
+            pengunjung. Namun, taman seperti ini memang penting adanya untuk di
+            tengah pemukiman. Tempat untuk meredakan sedikit rasa penat dari
+            sibuknya pemukiman di Malang. Saat itu terlihat banyak anak yang
+            sedang bermain di taman. Tentu saja mereka sedang libur, hari ini
+            Hari Sabtu.
+          </p>
+          <p>
+            Kami duduk dan beristirahat di taman itu sembari bersenda gurau.
+            Beberapa temanku pun juga memainkan permainan di taman itu. Tanpa
+            sadar, banyak di antara kami yang belum sarapan. Dan berpikir untuk
+            membeli sarapan sekaligus kembali ke UB.
+          </p>
+          <div class="figure-container">
+            <iframe
+              width="100%"
+              height="225"
+              src="https://www.youtube.com/embed/qlXLvVcxU-o?si=CSdfRzFGSvFJo1MM"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <p class="figure-caption">Bermain jungkat-jungkit</p>
+          </div>
+          <p>
+            Pada pukul sepuluh, kami memutuskan untuk beranjak dari
+            peristirahatan kami dan melanjutkan perjalanan kembali ke UB. Tidak
+            ingin mengulang rute seperti keberangkatan, kami melewati jalan lain
+            untuk pulang. Di perjalanan, kami melewati Gereja Katedral Paroki
+            Santa Perawan Maria dari Gunung Karmel. Katedral ini berbeda dari
+            katedral lain yang menggunakan gaya arsitektur gotik atau klasik,
+            katedral ini menggunakan gaya arsitektur Art Deco. Gaya Seni yang
+            muncul di pertengahan perang dunia satu dan perang dunia dua.
+          </p>
+          <div class="figure-container">
+            <img
+              src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/Katedral.JPG?raw=true"
+              alt="Gereja Katedral Paroki Santa Perawan Maria dari Gunung Karmel"
+            />
+            <p class="figure-caption">
+              Gereja Katedral Paroki Santa Perawan Maria dari Gunung Karmel
+            </p>
+          </div>
+          <p>
+            Kemudian kami melanjutkan perjalanan melewati Jalan Jakarta. Aku
+            teringat warung mie ayam yang pernah kusinggahi bersama kekasihku.
+            Aku pun menyarankan teman-temanku untuk mengisi perut di sana. Mie
+            Ayam Pak No namanya, warung mie ayam di sudut Jalan Jakarta dan
+            Jalan Garut, di samping Gacoan, dan di sisi utara Taman Kunang
+            Kunang.
+          </p>
+          <p>
+            Aku dan beberapa temanku memesan mie ayam dan lainnya memesan pecel.
+            Canda temanku yang berasal dari Blitar, orang Blitar kalau sarapan
+            itu ya pecel. Tak lupa kami memesan minum. Es cendol dan es degan.
+            Di cuaca yang terik seperti ini, es adalah barang wajib. Kami
+            kembali bercakap-cakap sembari menunggu semua pesanan datang. Kami
+            juga bergurau perihal apa yang akan kami tulis di catatan perjalanan
+            kami. Jujur aku juga bingung tentang apa yang akan aku tulis.
+            Tulisan ini saja, setengah ngelantur dan setengah mengingat ingat
+            apa saja yang terjadi di perjalanan itu.
+          </p>
+          <p>
+            Pesanan pun datang. Aku memesan mie ayam biasa dan es cendol.
+            Seperti nama menunya, mie ayam ini biasa. Mie, kuah, ayam, dan
+            beberapa potongan sawi. Meskipun begitu, mie ini nikmat sekali.
+            Harganya pun sangat ramah untuk kantong mahasiswa seperti kami. Kami
+            menyantap
+            <span class="tooltip"
+              >“sarapan”
+              <span class="tooltiptext"
+                >Meskipun jam sudah menunjukkan pukul sepuluh lebih</span
+              >
+            </span>
+            sampai habis.
+          </p>
+
+          <div class="figure-container">
+            <img
+              src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/mie-ayam.JPG?raw=true"
+              alt="Your Image Description"
+            />
+            <p class="figure-caption">Sarapan</p>
+          </div>
+          <p>
+            Setelah menikmati sarapan yang cukup mengisi perut, kami melanjutkan
+            perjalanan kami. Melewati Jalan Garut dan kembali ke Jalan Veteran.
+            Kami menyusuri kembali Jalan Veteran tapi kali ini dari sisi yang
+            berbeda. Kulihat langit mulai tampak menghitam. Mungkin hari ini
+            akan hujan, pikirku.
+          </p>
+          <p>
+            Saat mulai mendekati UB kami berpikir untuk masuk melalui gerbang
+            lain. Kami masuk melalui Gerbang BNI. Kami pikir kalau melewati
+            Gerbang BNI akan ada hal baru untuk ditulis di catatan perjalanan
+            nantinya. Dan itu terbukti benar. Hahahaha.
+          </p>
+          <p>
+            Kami berjalan melewati gedung Alumni, Griya, FILKOM, dan kemudian
+            belok menuju bundaran. Di situ kami menjumpai stan makanan yang
+            cukup banyak jumlahnya. Ada penjual takoyaki, nasi goreng, soto,
+            pempek, dan lain-lain. Aku pun membeli teh poci. Yah, meskipun
+            sedikit kurang manis tapi cukup untuk melepas dahagaku setelah
+            berjalan cukup jauh.
+          </p>
+          <div class="figure-container">
+            <iframe
+              width="100%"
+              height="225"
+              src="https://www.youtube.com/embed/ocsoYZRmXNM?si=QdFQkyX_G4nQWuT0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <p class="figure-caption">Bazaar</p>
+          </div>
+          <p>
+            Kami pun sampai dan berkumpul kembali di Teras Budaya, sesuai dengan
+            instruksi yang diberikan oleh dosenku. Tepat saat kami sampai di
+            Teras Budaya, air hujan tiba-tiba turun. Syukurlah tidak turun saat
+            kami masih di jalan. Setelah itu, dosenku memberi sedikit ceramah
+            tentang apa yang telah kami lakukan hari ini dan apa yang harus kami
+            tulis. Dan kami pun dipersilahkan pulang ke rumah/kosan
+            masing-masing.
+          </p>
+          <p>
+            <i>Quest</i> pun selesai dan semuanya kembali melakukan kegiatannya
+            masing-masing. Bagiku perjalanan ini
+            <span class="tooltip"
+              >mengesankan<span class="tooltiptext"
+                >meskipun agak capek</span
+              ></span
+            >. Kami tidak hanya menjelajahi kota dan mencatat pengalaman kami,
+            tetapi juga memperkuat ikatan di antara kami. Momen di Taman
+            Keluarga Merbabu dan saat menikmati mie ayam bersama telah
+            menciptakan kenangan yang penuh tawa dan hangat. Itu adalah
+            pengalaman yang membuktikan bahwa kadang-kadang, tugas yang tak
+            terduga bisa menjadi petualangan yang cukup seru dalam hidup.
+          </p>
+          <p>
+            Terima kasih telah membaca catatan perjalanan singkat ini. Semoga
+            kalian juga bisa menikmati perjalanan seperti yang telah kami
+            lakukan. Salam sejahtera, salam bahagia.
+          </p>
+          <p class="book-footer">Malang, 4 November 2023</p>
+          <div class="notes-container">
+            <p class="notes-header">Notes:</p>
+            <img
+              src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/jalan-jelek.JPG?raw=true"
+              alt="Jalan Jelek banget gilaa"
+              class="notes-image"
+            />
+            <p>
+              Sedikit catatan untuk Pemerintah Kota Malang, ini jalanan kek mana
+              ini? Trotoar kok pecah pecah gini? Kek manaaa ini?? Sangat tidak
+              ramah pejalan kaki. Bintang 1 untuk dishub malang.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
