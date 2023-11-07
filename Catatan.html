@@ -160,19 +160,6 @@
         text-decoration: underline;
       }
 
-      #toggle-button {
-        position: fixed;
-        top: 50%;
-        transform: translateY(-50%); /* Vertically center the button */
-        left: 5rem;
-        padding: 0.5rem 1rem; /* Adjust padding for better visibility */
-        font-size: 20px; /* Increase font size for flag emojis */
-        background-color: #fff; /* Add a background color for contrast */
-        border: 1px solid #ccc; /* Add a border for clarity */
-        border-radius: 4px; /* Add rounded corners */
-        cursor: pointer; /* Change cursor to pointer on hover */
-      }
-
       .language-toggle[data-lang="bahasaindonesia"] {
         display: block; /* Show the default language */
       }
@@ -181,11 +168,123 @@
         .tooltip .tooltiptext {
           width: 100px;
         }
-        #toggle-button {
-          position: fixed;
-          top: 90%;
-          left: 70%;
-        }
+      }
+
+      /* toggle */
+      .switch {
+        position: absolute;
+        display: inline-block;
+        margin: 0 5px;
+      }
+
+      .switch > span {
+        position: absolute;
+        top: 14px;
+        pointer-events: none;
+        font-family: "Helvetica", Arial, sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+        width: 50%;
+        text-align: center;
+      }
+
+      input.check-toggle-round-flat:checked ~ .off {
+        color: #000000;
+      }
+
+      input.check-toggle-round-flat:checked ~ .on {
+        color: #fff;
+      }
+
+      .switch > span.on {
+        left: 0;
+        padding-left: 2px;
+        color: #000000;
+      }
+
+      .switch > span.off {
+        right: 0;
+        padding-right: 4px;
+        color: #fff;
+      }
+
+      .check-toggle {
+        position: absolute;
+        margin-left: -9999px;
+        visibility: hidden;
+      }
+      .check-toggle + label {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      input.check-toggle-round-flat + label {
+        padding: 2px;
+        width: 97px;
+        height: 35px;
+        background-color: #000000;
+        -webkit-border-radius: 60px;
+        -moz-border-radius: 60px;
+        -ms-border-radius: 60px;
+        -o-border-radius: 60px;
+        border-radius: 60px;
+      }
+      input.check-toggle-round-flat + label:before,
+      input.check-toggle-round-flat + label:after {
+        display: block;
+        position: absolute;
+        content: "";
+      }
+
+      input.check-toggle-round-flat + label:before {
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        right: 2px;
+        background-color: #000000;
+
+        -moz-border-radius: 60px;
+        -ms-border-radius: 60px;
+        -o-border-radius: 60px;
+        border-radius: 60px;
+      }
+      input.check-toggle-round-flat + label:after {
+        top: 4px;
+        left: 4px;
+        bottom: 4px;
+        width: 48px;
+        background-color: #fff;
+        -webkit-border-radius: 52px;
+        -moz-border-radius: 52px;
+        -ms-border-radius: 52px;
+        -o-border-radius: 52px;
+        border-radius: 52px;
+        -webkit-transition: margin 0.2s;
+        -moz-transition: margin 0.2s;
+        -o-transition: margin 0.2s;
+        transition: margin 0.2s;
+      }
+
+      input.check-toggle-round-flat:checked + label:after {
+        margin-left: 44px;
+      }
+
+      .switch-container {
+        display: flex; /* Use flexbox to center elements */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        position: relative;
+        margin: 0 5px;
+        padding-top: 25px;
+        padding-bottom: 25px;
       }
     </style>
   </head>
@@ -193,7 +292,11 @@
     <div class="book-container">
       <div class="book-page">
         <div class="book-header">
-          <p class="book-title language-toggle" data-lang="bahasaindonesia">
+          <p
+            class="book-title language-toggle"
+            data-lang="bahasaindonesia"
+            style="display: block"
+          >
             Jalan Jalan Malang
           </p>
           <p
@@ -247,8 +350,13 @@
             barang-barang yang perlu kubawa untuk perjalanan nanti.
           </p>
           <p class="language-toggle" data-lang="nihongo" style="display: none">
-            突然の朝日が俺の部屋に入ってきて、俺をベッドから引っ張り起こすんだ。アラームなしで目が覚める、最高の感じだぜ。昨日の夜に聴いた日本の曲の<i><a href="https://open.spotify.com/playlist/18sDf2QkpdwcFpdIm3ETUW"
-              target="_blank">プレイリスト</a></i>がまだ再生中で、スマホを手に取るよ。大学のクラスのチャットグループからお知らせが来て、先生が今日の授業が普段とは違うって教えてくれる。今日はクエストがあって、街中を歩き回って旅行の体験をノートに書かないといけないんだ。それを見て俺は急いでシャワーを浴びて、旅行に持って行く物を用意するんだ。
+            突然の朝日が俺の部屋に入ってきて、俺をベッドから引っ張り起こすんだ。アラームなしで目が覚める、最高の感じだぜ。昨日の夜に聴いた日本の曲の<i
+              ><a
+                href="https://open.spotify.com/playlist/18sDf2QkpdwcFpdIm3ETUW"
+                target="_blank"
+                >プレイリスト</a
+              ></i
+            >がまだ再生中で、スマホを手に取るよ。大学のクラスのチャットグループからお知らせが来て、先生が今日の授業が普段とは違うって教えてくれる。今日はクエストがあって、街中を歩き回って旅行の体験をノートに書かないといけないんだ。それを見て俺は急いでシャワーを浴びて、旅行に持って行く物を用意するんだ。
           </p>
           <p class="language-toggle" data-lang="bahasaindonesia">
             Setelah semua siap, aku pergi menuju UB menaiki motor yang kuberi
@@ -421,12 +529,16 @@
             apa saja yang terjadi di perjalanan itu.
           </p>
           <p class="language-toggle" data-lang="nihongo" style="display: none">
-            俺と仲間たちはMie
-            Ayamと<span class="tooltip"
-            >Pecel<span class="tooltiptext"
-              >野菜とピーナツソースの料理<a title="Supardisahabu, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Nasi_Pecel_Khas_Blitar.jpg"><img width="156" alt="Nasi Pecel Khas Blitar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Nasi_Pecel_Khas_Blitar.jpg/256px-Nasi_Pecel_Khas_Blitar.jpg"></a></span
-            ></span
-          >を注文した。ひとり、Blitar出身の友達は、Blitar出身者は朝食にはPecelを食べるんだと言って笑ってた。もちろん、飲み物も注文したよ。Cendol氷とDegan氷をね。このような暑い日には、氷は必需品さ。俺たちは注文が出てくるのを待ちながら、またおしゃべりを楽しんでた。同時に、旅行ノートに何を書くかについても冗談を言い合ってたんだ。正直、俺も何を書くべきか迷ってた。この文章も、半分はおしゃべりで、半分はその旅行で何があったかを思い出してるんだよ。
+            俺と仲間たちはMie Ayamと<span class="tooltip"
+              >Pecel<span class="tooltiptext"
+                >野菜とピーナツソースの料理<a
+                  title="Supardisahabu, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:Nasi_Pecel_Khas_Blitar.jpg"
+                  ><img
+                    width="156"
+                    alt="Nasi Pecel Khas Blitar"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Nasi_Pecel_Khas_Blitar.jpg/256px-Nasi_Pecel_Khas_Blitar.jpg" /></a></span></span
+            >を注文した。ひとり、Blitar出身の友達は、Blitar出身者は朝食にはPecelを食べるんだと言って笑ってた。もちろん、飲み物も注文したよ。Cendol氷とDegan氷をね。このような暑い日には、氷は必需品さ。俺たちは注文が出てくるのを待ちながら、またおしゃべりを楽しんでた。同時に、旅行ノートに何を書くかについても冗談を言い合ってたんだ。正直、俺も何を書くべきか迷ってた。この文章も、半分はおしゃべりで、半分はその旅行で何があったかを思い出してるんだよ。
           </p>
           <p class="language-toggle" data-lang="bahasaindonesia">
             Pesanan pun datang. Aku memesan mie ayam biasa dan es cendol.
@@ -446,7 +558,7 @@
             そして、注文が出てきた。俺は普通のMie
             AyamとCendol氷を注文した。メニューの名前通り、このMie
             Ayamは普通だったな。麺、スープ、鶏肉、そしてちょっとの青菜が入ってた。それでも、このMie
-            Ayamはすごくおいしかった。値段も、俺たち大学生には優しい感じだった。俺たちは「朝食」をペロリと食べたよ。
+            Ayamはすごくおいしかった。値段も、俺たち大学生には優しい感じだった。俺たちは <span class="tooltip">「朝食」<span class="tooltiptext">もう10時過ぎてるのに…</span></span>をペロリと食べたよ。
           </p>
 
           <div class="figure-container">
@@ -454,7 +566,8 @@
               src="https://github.com/yorunohikari/html-css-js_Portfolio/blob/main/assets/mie-ayam.JPG?raw=true"
               alt="Your Image Description"
             />
-            <p class="figure-caption">Sarapan</p>
+            <p class="figure-caption language-toggle" data-lang="bahasaindonesia">Sarapan</p>
+            <p class="figure-caption language-toggle" data-lang="nihongo" style="display: none;">朝食</p>
           </div>
           <p class="language-toggle" data-lang="bahasaindonesia">
             Setelah menikmati sarapan yang cukup mengisi perut, kami melanjutkan
@@ -557,9 +670,7 @@
               class="notes-image"
             />
             <p class="language-toggle" data-lang="bahasaindonesia">
-              Sedikit catatan untuk Pemerintah Kota Malang, ini jalanan kek mana
-              ini? Trotoar kok pecah pecah gini? Kek manaaa ini?? Sangat tidak
-              ramah pejalan kaki. Bintang 1 untuk dishub malang.
+              Sedikit catatan untuk Pemerintah Kota Malang. Ini trotoarnya sangat tidak ramah pejalan kaki. Bintang 1 untuk dishub malang.
             </p>
             <p
               class="language-toggle"
@@ -571,18 +682,27 @@
           </div>
         </div>
       </div>
+      <div class="switch-container">
+        <div class="switch">
+          <input
+            id="language-toggle"
+            class="check-toggle check-toggle-round-flat"
+            type="checkbox"
+            checked
+          />
+          <label for="language-toggle"></label>
+          <span class="on">JPN</span>
+          <span class="off">INA</span>
+        </div>
+      </div>
     </div>
-    <button id="toggle-button">🇯🇵</button>
     <script>
       // Function to toggle the language
       document
-        .getElementById("toggle-button")
-        .addEventListener("click", function () {
+        .getElementById("language-toggle")
+        .addEventListener("change", function () {
           var paragraphs = document.querySelectorAll(".language-toggle");
-          var currentLang =
-            paragraphs[0].style.display === "block"
-              ? "nihongo"
-              : "bahasaindonesia";
+          var currentLang = this.checked ? "bahasaindonesia" : "nihongo";
 
           paragraphs.forEach(function (paragraph) {
             var lang = paragraph.getAttribute("data-lang");
